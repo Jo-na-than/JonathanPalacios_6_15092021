@@ -8,19 +8,20 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 // Import de la route dédiée aux sauces
-
+const saucesRoutes = require('./routes/sauce');
 
 // Import route dédiée aux users
-
+const userRoutes = require('./routes/user');
 
 // Donne accès au chemin de notre système de fichier "images"
-
+const path = require('path');
 
 // Connexion à la base de donnée avec Mongoose
-
-
-
-
+mongoose.connect('mongodb+srv://Jonathan:03Juin2018@cluster0.vxk3v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+  { useNewUrlParser: true,
+    useUnifiedTopology: true })
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 // Application Express
 const app = express();
