@@ -1,5 +1,5 @@
 // Récupération du "models/Sauce.js"
-const Sauce = require('../models/Sauce');
+const Sauce = require('../models/sauce');
 
 // Récupération du module 'file system' de Node permettant de gérer les téléchargements,la modifications d'images et la suppression de tout le fichier
 const fs = require('fs');
